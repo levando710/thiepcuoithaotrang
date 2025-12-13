@@ -99,19 +99,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initSwiperSlider() {
     new Swiper(".mySwiper", {
-        slidesPerView: 3, // CỐ ĐỊNH 3 ẢNH (Bất kể màn hình)
+        slidesPerView: 1, // Mặc định mobile 1 ảnh
         spaceBetween: 20,
         loop: true,
         centeredSlides: true,
+        autoHeight: true, // Tự động chỉnh chiều cao để ảnh không bị cắt
         autoplay: {
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
         },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
-        // Đã xóa phần breakpoints để không bị chuyển về 1 ảnh trên mobile
+        breakpoints: {
+            768: { 
+                slidesPerView: 2, // Tablet 2 ảnh
+                autoHeight: false
+            },
+            1024: { 
+                slidesPerView: 3, // Desktop 3 ảnh
+                autoHeight: false
+            },
+        },
     });
 
     const galleryImages = document.querySelectorAll('.gallery-img');

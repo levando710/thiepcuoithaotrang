@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1280, initial-scale=0.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đám cưới Hoài Trang & Lê Thao</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
             <div class="border-top border-bottom border-light py-3 d-inline-block px-5 mb-5">
                 <span class="fs-3 font-cinzel">28 . 12 . 2025</span>
             </div>
-            <div id="countdown" class="d-flex justify-content-center gap-4 mb-4"></div>
+            <div id="countdown" class="d-flex justify-content-center gap-3 gap-md-4 mb-4"></div>
         </div>
     </header>
 
@@ -50,22 +50,24 @@
                 <h2 class="font-playfair display-5">Cô Dâu & Chú Rể</h2>
                 <div class="divider mx-auto"></div>
             </div>
-            <div class="row align-items-center justify-content-center text-center">
-                <div class="col-4 mb-4" data-aos="fade-right">
+            <div class="row align-items-center justify-content-center text-center gx-2 gx-md-4">
+                <div class="col-6 col-md-4 mb-4" data-aos="fade-right">
                     <div class="card border-0 bg-transparent">
-                        <img src="images/groom.jpg" class="rounded-circle shadow-lg mx-auto mb-4 img-thumbnail border-0" style="width: 250px; height: 250px; object-fit: cover;">
-                        <h3 class="font-playfair">Lê Thao</h3>
-                        <p class="text-muted">Chàng bác sĩ vui tính.</p>
+                        <img src="images/groom.jpg" class="rounded-circle shadow-lg mx-auto mb-3 img-thumbnail border-0 couple-img" style="object-fit: cover;">
+                        <h3 class="font-playfair couple-name">Lê Thao</h3>
+                        <p class="text-muted small">Chàng bác sĩ vui tính.</p>
                     </div>
                 </div>
-                <div class="col-1 text-center" data-aos="zoom-in">
+                
+                <div class="col-md-1 d-none d-md-block text-center" data-aos="zoom-in">
                     <i class="bi bi-heart-fill text-primary fs-1"></i>
                 </div>
-                <div class="col-4 mb-4" data-aos="fade-left">
+
+                <div class="col-6 col-md-4 mb-4" data-aos="fade-left">
                     <div class="card border-0 bg-transparent">
-                        <img src="images/bride.jpg" class="rounded-circle shadow-lg mx-auto mb-4 img-thumbnail border-0" style="width: 250px; height: 250px; object-fit: cover;">
-                        <h3 class="font-playfair">Hoài Trang</h3>
-                        <p class="text-muted">Nàng y tá mộng mơ.</p>
+                        <img src="images/bride.jpg" class="rounded-circle shadow-lg mx-auto mb-3 img-thumbnail border-0 couple-img" style="object-fit: cover;">
+                        <h3 class="font-playfair couple-name">Hoài Trang</h3>
+                        <p class="text-muted small">Nàng y tá mộng mơ.</p>
                     </div>
                 </div>
             </div>
@@ -77,7 +79,7 @@
             <div class="text-center mb-5" data-aos="fade-up">
                 <h2 class="font-playfair display-5">Album Hạnh Phúc</h2>
                 <div class="divider mx-auto mb-3"></div>
-                <p class="text-muted">Những khoảnh khắc đẹp nhất của chúng mình.</p>
+                <p class="text-muted">Những khoảnh khắc đẹp nhất.</p>
             </div>
             <div class="swiper mySwiper" data-aos="fade-up">
                 <div class="swiper-wrapper" id="gallery-wrapper"></div>
@@ -89,66 +91,74 @@
     <section id="events" class="py-5 bg-secondary bg-opacity-10">
         <div class="container py-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="font-playfair display-5">Sự Kiện Quan Trọng</h2>
+                <h2 class="font-playfair display-5">Sự Kiện</h2>
                 <div class="divider mx-auto mb-3"></div>
-                <p class="text-muted">Trân trọng kính mời quý khách đến chung vui tại tư gia</p>
+                <p class="text-muted">Trân trọng kính mời quý khách</p>
             </div>
-            <div class="row justify-content-center g-5">
-                <div class="col-5" data-aos="fade-up">
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-5 col-12" data-aos="fade-up">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
                         <div class="card-header bg-white border-bottom-0 text-center pt-4 pb-0">
                             <span class="badge bg-danger bg-opacity-10 text-danger fs-6 px-3 py-2 rounded-pill mb-2">
-                                <i class="bi bi-flower1 me-1"></i> NHÀ GÁI
+                                NHÀ GÁI
                             </span>
                             <h3 class="font-playfair text-danger display-6">Hoài Trang</h3>
                         </div>
                         <div class="card-body p-4 text-center">
-                            <div class="row justify-content-center g-3 mb-3">
+                            <div class="row justify-content-center g-2 mb-3">
                                 <div class="col-6">
                                     <div class="py-3 px-1 rounded-3 bg-danger bg-opacity-10 h-100">
                                         <h6 class="font-playfair text-danger mb-1">Lễ Vu Quy</h6>
-                                        <p class="mb-0 small text-muted">08:30</p>
+                                        <p class="mb-0 fw-bold">08:30</p>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="py-3 px-1 rounded-3 bg-danger bg-opacity-10 h-100">
                                         <h6 class="font-playfair text-danger mb-1">Tiệc Mừng</h6>
-                                        <p class="mb-0 small text-muted">11:00</p>
+                                        <p class="mb-0 fw-bold">11:00</p>
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="fw-bold text-dark mb-1">Tư Gia Nhà Gái</h5>
-                            <p class="text-muted mb-3 small">Số 10, Hoa Phượng, HP</p>
-                            <a href="#" class="btn btn-sm btn-danger text-white rounded-pill px-4">Bản đồ</a>
+                            <div class="border-top pt-3">
+                                <h5 class="fw-bold text-dark mb-1">Tư Gia Nhà Gái</h5>
+                                <p class="text-muted mb-3 small">Số 10, Hoa Phượng, HP</p>
+                                <a href="https://goo.gl/maps/placeholder" target="_blank" class="btn btn-sm btn-danger text-white rounded-pill px-4 shadow-sm">
+                                    <i class="bi bi-map-fill me-1"></i> Bản đồ
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-5 col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow rounded-4 overflow-hidden h-100">
                         <div class="card-header bg-white border-bottom-0 text-center pt-4 pb-0">
                             <span class="badge bg-groom-light text-groom fs-6 px-3 py-2 rounded-pill mb-2 border border-groom border-opacity-25">
-                                <i class="bi bi-house-heart-fill me-1"></i> NHÀ TRAI
+                                NHÀ TRAI
                             </span>
                             <h3 class="font-playfair text-groom display-6 fw-bold">Lê Thao</h3>
                         </div>
                         <div class="card-body p-4 text-center">
-                            <div class="row justify-content-center g-3 mb-3">
+                            <div class="row justify-content-center g-2 mb-3">
                                 <div class="col-6">
                                     <div class="py-3 px-1 rounded-3 bg-groom-light h-100 border border-groom border-opacity-10">
                                         <h6 class="font-playfair text-groom mb-1">Thành Hôn</h6>
-                                        <p class="mb-0 small text-secondary">10:30</p>
+                                        <p class="mb-0 fw-bold">10:30</p>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="py-3 px-1 rounded-3 bg-groom-light h-100 border border-groom border-opacity-10">
                                         <h6 class="font-playfair text-groom mb-1">Tiệc Cưới</h6>
-                                        <p class="mb-0 small text-secondary">17:30</p>
+                                        <p class="mb-0 fw-bold">17:30</p>
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="fw-bold text-dark mb-1">Tư Gia Nhà Trai</h5>
-                            <p class="text-secondary mb-3 small">Số 22, Lê Lợi, HN</p>
-                            <a href="#" class="btn btn-sm btn-groom rounded-pill px-4">Bản đồ</a>
+                            <div class="border-top pt-3">
+                                <h5 class="fw-bold text-dark mb-1">Tư Gia Nhà Trai</h5>
+                                <p class="text-secondary mb-3 small">Số 22, Lê Lợi, HN</p>
+                                <a href="https://goo.gl/maps/placeholder" target="_blank" class="btn btn-sm btn-groom rounded-pill px-4 shadow-sm fw-bold">
+                                    <i class="bi bi-map-fill me-1"></i> Bản đồ
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,6 +169,7 @@
     <section id="gift" class="py-5">
         <div class="container text-center" data-aos="zoom-in">
             <h2 class="font-playfair display-5 mb-3">Hộp Mừng Cưới</h2>
+            <p class="lead text-muted mb-4 w-75 mx-auto">Gửi tặng đôi trẻ những món quà ý nghĩa</p>
             <button type="button" class="btn btn-primary btn-lg rounded-pill px-5 shadow" data-bs-toggle="modal" data-bs-target="#giftModal">
                 <i class="bi bi-gift-fill me-2"></i> Gửi Quà Mừng
             </button>
@@ -175,14 +186,14 @@
                 <div class="modal-body p-4 bg-white">
                     <div class="row g-4 justify-content-center">
                         <div class="col-6 text-center border-end-md">
-                            <h4 class="font-playfair text-primary mb-3">Chú Rể</h4>
-                            <img src="images/qr-groom.jpg" class="img-fluid rounded border mb-3" style="max-width: 200px;">
-                            <p class="mb-0">BIDV: 2220868825</p>
+                            <h5 class="font-playfair text-primary mb-2">Chú Rể</h5>
+                            <img src="images/qr-groom.jpg" class="img-fluid rounded border mb-2" style="max-width: 180px;">
+                            <p class="mb-0 small fw-bold">BIDV: 2220868825</p>
                         </div>
                         <div class="col-6 text-center">
-                            <h4 class="font-playfair text-primary mb-3">Cô Dâu</h4>
-                            <img src="images/qr-bride.jpg" class="img-fluid rounded border mb-3" style="max-width: 200px;">
-                            <p class="mb-0">VCB: 9382197160</p>
+                            <h5 class="font-playfair text-primary mb-2">Cô Dâu</h5>
+                            <img src="images/qr-bride.jpg" class="img-fluid rounded border mb-2" style="max-width: 180px;">
+                            <p class="mb-0 small fw-bold">VCB: 9382197160</p>
                         </div>
                     </div>
                 </div>
@@ -193,7 +204,7 @@
     <section id="rsvp" class="py-5 section-parallax text-white text-center position-relative">
         <div class="overlay-dark"></div>
         <div class="container position-relative z-2 py-5" data-aos="fade-up">
-            <h2 class="font-playfair display-4 mb-3">Tham Dự Cùng Chúng Tôi</h2>
+            <h2 class="font-playfair display-4 mb-3">Tham Dự</h2>
             <div class="card bg-white text-dark p-4 mx-auto shadow-lg" style="max-width: 500px; border-radius: 15px;">
                 <form id="rsvpForm">
                     <div class="mb-3">
@@ -201,9 +212,9 @@
                     </div>
                     <div class="mb-3">
                         <select name="GuestOf" class="form-select bg-light border-0">
-                            <option value="Khách Nhà Trai">Bạn là khách Nhà Trai (Chú Rể)</option>
-                            <option value="Khách Nhà Gái">Bạn là khách Nhà Gái (Cô Dâu)</option>
-                            <option value="Khách Cả Hai">Khách chung cả hai nhà</option>
+                            <option value="Khách Nhà Trai">Khách Nhà Trai (Chú Rể)</option>
+                            <option value="Khách Nhà Gái">Khách Nhà Gái (Cô Dâu)</option>
+                            <option value="Khách Cả Hai">Khách chung</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -212,7 +223,7 @@
                     <div class="mb-3">
                         <select name="Attending" class="form-select bg-light border-0">
                             <option value="Có tham dự">Chắc chắn tham dự!</option>
-                            <option value="Không tham dự">Xin lỗi, tôi bận mất rồi</option>
+                            <option value="Không tham dự">Xin lỗi, tôi bận</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -225,7 +236,7 @@
     </section>
 
     <footer class="bg-dark text-white py-4 text-center">
-        <p class="mb-0 font-montserrat">Made with <i class="bi bi-heart-fill text-danger"></i> for Wedding</p>
+        <p class="mb-0 font-montserrat small">Wedding of Trang & Thao</p>
     </footer>
 
     <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">

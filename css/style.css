@@ -5,25 +5,18 @@
     --font-body: 'Montserrat', sans-serif;
 }
 
-/* ÉP CỨNG GIAO DIỆN DESKTOP */
-body { 
-    font-family: var(--font-body); 
-    color: #555; 
-    line-height: 1.7;
-    min-width: 1280px !important; /* Bắt buộc web rộng 1280px */
-    overflow-x: auto;
-}
-
-/* Ép container không được co giãn theo mobile */
-.container {
-    max-width: 1200px !important; 
-    width: 1200px !important;
-}
-
+body { font-family: var(--font-body); color: #555; line-height: 1.6; overflow-x: hidden; }
 .font-playfair { font-family: var(--font-head); }
 .font-cinzel { font-family: 'Cinzel', serif; }
 .font-montserrat { font-family: 'Montserrat', sans-serif; }
 .letter-spacing-3 { letter-spacing: 3px; }
+
+/* Font chữ thông minh (Tự to nhỏ theo màn hình) - Đây là bí quyết của Canva */
+.display-1 { font-size: clamp(2.5rem, 8vw, 5rem) !important; line-height: 1.1; }
+.display-4 { font-size: clamp(2rem, 5vw, 3.5rem) !important; }
+.display-5 { font-size: clamp(1.8rem, 4vw, 3rem) !important; }
+.display-6 { font-size: clamp(1.5rem, 3vw, 2.5rem) !important; font-weight: 700; }
+.couple-name { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 0; }
 
 .text-primary { color: var(--primary-color) !important; }
 .bg-primary { background-color: var(--primary-color) !important; }
@@ -53,13 +46,15 @@ body {
 .navbar.scrolled .navbar-brand { color: var(--primary-color) !important; }
 .navbar-dark .nav-link { color: rgba(255,255,255,0.95); font-weight: 500; }
 
-.timeline-circle { width: 50px; height: 50px; border-radius: 50%; font-size: 1.2rem; z-index: 2; }
-.timeline { position: relative; }
-.timeline::before {
-    content: ''; position: absolute; top: 0; bottom: 0; left: 50%;
-    width: 2px; background: #ddd; margin-left: -1px;
+/* Timeline cho modal QR */
+@media (min-width: 768px) {
+    .border-end-md { border-right: 1px dashed #ddd; }
 }
-.border-end-md { border-right: 1px dashed #ddd; }
+@media (max-width: 768px) {
+    .border-end-md { border-bottom: 1px dashed #ddd; padding-bottom: 20px; margin-bottom: 20px; }
+    .header-bg { background-attachment: scroll !important; height: 100vh; }
+    .couple-img { width: 140px !important; height: 140px !important; margin-bottom: 15px !important; }
+}
 
 .gallery-img { cursor: pointer; transition: transform 0.3s ease; }
 .gallery-img:hover { transform: scale(1.02); opacity: 0.9; }
@@ -70,8 +65,9 @@ body {
 .time-box {
     background: rgba(255,255,255,0.2); backdrop-filter: blur(5px);
     padding: 10px 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.3);
-    min-width: 80px;
+    min-width: 70px;
 }
+@media (max-width: 768px) { .time-box { padding: 5px 10px; min-width: 60px; } }
 
 @keyframes pulse-animation {
     0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
@@ -83,21 +79,39 @@ body {
 .text-groom { color: #003366 !important; } 
 .bg-groom-light { background-color: #e6f0ff !important; }
 .border-groom { border-color: #003366 !important; }
-.btn-groom { background-color: #003366 !important; border-color: #003366 !important; color: #fff !important; }
+.btn-groom { 
+    background-color: #003366 !important; 
+    border-color: #003366 !important;
+    color: #fff !important;
+}
 
 .text-bride { color: #cc0033 !important; }
 .bg-bride-light { background-color: #ffe6ea !important; }
 .border-bride { border-color: #cc0033 !important; }
-.btn-bride { background-color: #cc0033 !important; border-color: #cc0033 !important; color: #fff !important; }
+.btn-bride { 
+    background-color: #cc0033 !important; 
+    border-color: #cc0033 !important;
+    color: #fff !important;
+}
 
+/* Slider Style */
 .swiper { width: 100%; padding-bottom: 50px; }
 .swiper-slide {
-    text-align: center; background: #fff;
+    text-align: center; background: transparent;
     display: flex; justify-content: center; align-items: center;
 }
 .swiper-slide img {
-    display: block; width: 100%; height: 500px;
-    object-fit: cover; border-radius: 10px;
+    display: block; width: 100%; height: auto; 
+    max-height: 500px; /* Giới hạn chiều cao max */
+    object-fit: contain; /* Ảnh luôn hiển thị trọn vẹn, không cắt */
+    border-radius: 10px;
     cursor: pointer; transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 .swiper-pagination-bullet-active { background-color: var(--primary-color) !important; }
+
+/* Ảnh cặp đôi */
+.couple-img {
+    width: 250px; height: 250px; object-fit: cover;
+    transition: all 0.3s ease;
+}
