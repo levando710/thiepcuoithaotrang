@@ -121,3 +121,41 @@ body {
 .text-bride { color: #d63384 !important; }
 .bg-bride-light { background-color: #fff0f5 !important; }
 .btn-bride { background-color: #d63384; color: #fff; }
+
+.btn-music {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff; /* Nền trắng */
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Luôn nổi trên cùng */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hiệu ứng xoay tròn khi nhạc phát */
+.playing {
+    animation: spin 3s linear infinite;
+    background-color: var(--primary-color); /* Đổi màu nền khi phát */
+    color: #fff;
+    border-color: #fff;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Đẩy nút lên cao chút trên mobile để không che nội dung */
+@media (max-width: 768px) {
+    .btn-music { bottom: 15px; left: 15px; width: 45px; height: 45px; }
+}

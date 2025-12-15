@@ -101,3 +101,47 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const musicBtn = document.getElementById('musicBtn');
+    const audio = document.getElementById('weddingMusic');
+    let isPlaying = false;
+
+    // Hàm bật/tắt nhạc
+    function toggleMusic() {
+        if (isPlaying) {
+            audio.pause();
+            musicBtn.classList.remove('playing');
+            musicBtn.innerHTML = '<i class="bi bi-music-note-beamed"></i>';
+        } else {
+            audio.play().then(() => {
+                musicBtn.classList.add('playing');
+                musicBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+            }).catch(err => console.log("Chặn Autoplay: " + err));
+        }
+        isPlaying = !isPlaying;
+    }
+
+    // Sự kiện click nút nhạc
+    musicBtn.addEventListener('click', toggleMusic);
+
+    // MẸO: Tự động phát nhạc khi người dùng chạm vào màn hình lần đầu tiên
+    // (Vì trình duyệt chặn tự phát, nên ta phải chờ người dùng tương tác)
+    function autoPlayOnFirstInteraction() {
+        if (!isPlaying) {
+            audio.play().then(() => {
+                isPlaying = true;
+                musicBtn.classList.add('playing');
+                musicBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+            }).catch(error => {
+                console.log("Autoplay blocked, waiting for interaction");
+            });
+        }
+        // Xóa sự kiện sau khi đã chạy 1 lần
+        document.removeEventListener('click', autoPlayOnFirstInteraction);
+        document.removeEventListener('scroll', autoPlayOnFirstInteraction);
+    }
+
+    // Lắng nghe cú click hoặc cuộn chuột đầu tiên
+    document.addEventListener('click', autoPlayOnFirstInteraction);
+    document.addEventListener('scroll', autoPlayOnFirstInteraction);
+});
